@@ -1,0 +1,11 @@
+<div class="card">
+    <!-- <img src="https://mdbootstrap.com/img/new/standard/nature/184.jpg" class="card-img-top" alt="..." /> -->
+    <div class="card-body">
+        <h5 class="card-title">{{contact.fullName}}</h5>
+        <p class="card-text">
+            {{contact.phone}}<br> {{contact.birthday | date}}
+        </p>
+        <a class="btn btn-primary" [routerLink]="['/updateContact',contact.nroIdentificacion]">Actualizar</a>
+        <a class="btn btn-danger ms-2" (click)="deleteContact(contact)">Eliminar</a>
+    </div>
+</div>

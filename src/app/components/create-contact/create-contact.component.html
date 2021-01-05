@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-body">
+        <form [formGroup]="contactForm" (ngSubmit)="createNewContact()">
+            <div class="form-group">
+                <label class="form-label">Número de Identificación (*)</label>
+                <input type="number" formControlName="nroIdentificacion" class="form-control" placeholder="Introduzca número de identificación" required><br>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Nombre Completo (*)</label>
+                <input type="text" formControlName="fullName" class="form-control" placeholder="Introduzca nombre completo" required><br>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Celular (*)</label>
+                <input type="number" formControlName="phone" class="form-control" placeholder="Introduzca celular" required><br>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Dirección (*)</label>
+                <input type="text" formControlName="dir" class="form-control" placeholder="Introduzca dirección" required><br>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Fecha de Cumpleaños (*)</label>
+                <input type="date" formControlName="birthday" class="form-control" placeholder="Introduzca fecha de cumpleaños" required><br>
+            </div>
+            <label>Los campos con (*) son obligatorios</label><br><br>
+            <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Guardar</button>
+            <button class="btn btn-primary ms-3" [routerLink]="['/contacts']">Cancelar</button>
+        </form>
+    </div>
+</div>

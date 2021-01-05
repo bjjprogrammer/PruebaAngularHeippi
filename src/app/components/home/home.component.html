@@ -1,0 +1,9 @@
+<div class="container mt-2">
+    <div class="row">
+        <app-contador [counter]="contacts" [identifier]="'Total de Contactos'"></app-contador>
+        <app-contador [counter]="birthdayContacts" [identifier]="'Happy Birthday Today'"></app-contador>
+    </div>
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-primary btn-lg" [routerLink]="['/contacts']" type="button">Mis Contactos</button>
+    </div>
+</div>
